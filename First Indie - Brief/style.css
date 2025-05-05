@@ -1,0 +1,118 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  background-color: #0d0d12;
+  /* add missing declaration */
+}
+
+.header {
+  height: 660px;
+  background-image: url(./images/Mountains.jpg);
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  background-size: cover;
+  /* add missing declarations */
+}
+
+.header__banner {
+  font-weight: 500;
+  letter-spacing: -0.64px;
+  font-size: 20px;
+  line-height: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 20px auto 0;
+}
+
+/* add a CSS rule for the header title here */
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: "Cal sans";
+  font-size: 140px;
+  font-weight: 500;
+  line-height: 132px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 auto 30px;
+  max-width: 1400px;
+  text-align: center;
+  text-shadow: rgb(43, 43, 43) 8px 10px 10px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 100px auto;
+  /* add missing declarations */
+}
+
+.card {
+  width: 490px;
+  min-height: 440px;
+  background: #fcfcfc;
+  font-family: "Cal sans";
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  max-height: 300px;
+  background-size: cover 50%;
+  display: block;
+  object-fit: cover;
+}
+
+.card-content {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #151515;
+  margin: 20px 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 20px 0 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: center;
+}
+/* add CSS rules for cards and their content here */
+
+/* add CSS rules for the footer and its content here */
