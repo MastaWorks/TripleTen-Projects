@@ -66,37 +66,52 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 40px 15%;
+  
   gap: 20px;
   /* add missing declarations */
 }
 
 .card{
-    height: 400px;
+    height: auto;
     width: 500px;
-    background-color: rgb(216, 236, 255);
-    margin-bottom: 20px;
-    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 10px rgb(198, 198, 198);
+    padding-bottom: 50px;
+    margin-bottom: 30px;
     box-sizing: content-box;
     display: inline-block;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.no-right-margin{
+  margin-right: 0;
 }
 
 .card-image{
-    background-color: blueviolet;
-    height: 30%;
+    background-color: #d95ad8;
+    background-position: cover;
+    background-size: cover 50%;
+    height: 200px;
     width: 100%;
 }
 
 .card-title{
     font-size: 50px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-left: 20px;
 }
 
 .card-text{
-    font-size: 20px;
-    margin: 0px 20px 20px;
+    font-size: 19px;
+    margin: 0px 20px auto;
+}
+
+.footer{
+  text-align: center;
+  margin: 50px;
 }
 
 
