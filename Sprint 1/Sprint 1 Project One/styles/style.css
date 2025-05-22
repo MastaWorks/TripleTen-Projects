@@ -1,5 +1,10 @@
 .page {
-  /* Add page class properties here */
+  min-width: 1300px;
+  max-width: 1600px;
+  margin: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .header {
@@ -14,9 +19,22 @@
 }
 
 .header__title {
+  margin-top: 128px;
+  margin-bottom: 16px;
+  font-size: 66px;
+  line-height: 76px;
+  font-weight: 500px;
+  color: #000000;
+  max-width: 650px;
 }
 
 .header__description {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+  max-width: 525px;
 }
 
 .header__image {
@@ -43,15 +61,27 @@
 }
 
 .nav {
+  display: flex;
+  justify-content: space-between;
   /* Add flex properties here */
 }
 
 .nav__logo {
+  height: 80px;
+  width: 57px;
+  justify-content: flex-start;
 }
 
 .nav__links {
   /* Reset default list styles here */
+  display: flex;
+  column-gap: 20px;
+  list-style-type: none;
   margin: 8px 0 0;
+}
+
+ul {
+  padding: 0;
 }
 
 .nav__link {
