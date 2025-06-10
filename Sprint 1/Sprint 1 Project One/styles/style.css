@@ -238,10 +238,12 @@ ul {
 
 .staff {
   padding: 100px 0 140px;
+  background-image: url("/images/staff_picks_background.jpg");
 }
 
 .staff__title {
   text-align: center;
+  color: white;
   font-size: 44px;
   line-height: 52px;
   margin: 0 0 24px;
@@ -249,6 +251,7 @@ ul {
 }
 
 .staff__subtitle {
+  color: white;
   text-align: center;
   font-size: 20px;
   line-height: 30px;
@@ -257,9 +260,21 @@ ul {
 }
 
 /* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
+.staff__cards {
+  max-width: 760px;
+  margin: 68px auto 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+  padding-left: 0;
+  justify-content: center;
+}
 
 .card {
   background-color: #fff;
+  height: 420px;
+  width: 360px;
   border-radius: 6px;
   padding: 32px 40px 20px 32px;
   box-sizing: border-box;
@@ -286,7 +301,7 @@ ul {
 }
 
 .card__footer {
-  margin: 0;
+  margin-top: auto;
   font-size: 14px;
   line-height: 20px;
   color: #838383;
@@ -310,11 +325,17 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0;
+  justify-content: center;
+  display: flex;
+  gap: 40px;
+
   /* Add styles */
 }
 
 .step {
   /* Add styles */
+  align-items: center;
+  width: 220px;
 }
 
 .step__title {
@@ -359,28 +380,52 @@ ul {
 }
 
 .about__image {
+  position: absolute;
+  top: -82.5px;
+  left: -271px;
   width: 703px;
   /* add styles */
 }
 
+.about__paragraph {
+  margin-bottom: 20px;
+}
+
+.about__paragraph:nth-of-type(3n) {
+  margin-bottom: 0;
+}
+
 .footer {
   box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 60px 80px;
 }
 
 .footer__columns {
+  margin-bottom: 108px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer__column_content_hours {
+  margin: 0;
+  padding: 0;
 }
 
 .footer__column_content_social {
 }
 
 .footer__logo {
+  width: 57px;
+  height: 80px;
 }
 
 .footer__list {
   /* The code below removes the default browser styles for lists */
+  justify-content: flex-end;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -390,6 +435,8 @@ ul {
 }
 
 .footer__column-heading {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .footer__column-link {
@@ -400,7 +447,10 @@ ul {
 }
 
 .footer__social-icon {
+  height: 16px;
+  width: 16px;
 }
 
 .footer__copyright {
+  color: white;
 }
