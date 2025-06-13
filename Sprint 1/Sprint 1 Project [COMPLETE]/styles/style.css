@@ -250,7 +250,8 @@ ul {
 
 .staff {
   padding: 100px 0 140px;
-  background-image: url(/images/staff_picks_background.jpg);
+  background-image: url(../images/staff_picks_background.jpg);
+  background-size: cover;
 }
 
 .staff__title {
@@ -315,6 +316,7 @@ ul {
 
 .card__footer {
   margin-top: auto;
+  margin-bottom: 0px;
   font-size: 14px;
   line-height: 20px;
   color: #838383;
@@ -388,6 +390,7 @@ ul {
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
+  margin-left: auto;
 }
 
 .about__image {
@@ -408,7 +411,7 @@ ul {
 
 .footer {
   box-sizing: border-box;
-  background-color: black;
+  background-color: #1f1f1f;
   padding: 60px 80px;
 }
 
@@ -450,13 +453,16 @@ ul {
 .footer__column-heading {
   margin-top: 0;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .footer__column-link {
+  display: flex;
   color: white;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
+  align-items: center;
 }
 
 .footer__column-link:hover {
@@ -466,7 +472,7 @@ ul {
 .footer__social-icon {
   height: 16px;
   width: 16px;
-  margin: 0;
+  margin: 0 10px 0 0;
   padding: 0;
 }
 
