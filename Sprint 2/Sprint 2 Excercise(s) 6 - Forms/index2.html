@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Forms</title>
+    <link href="/Styles/styles2.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="page">
+    <div class="form-container">
+      <form class="form">
+        <h1 class="form__title">Create an article</h1>
+        <fieldset class="form__fieldset">
+          <p>Author</p>
+          <input type="text" class="form__input" />
+          <input type="email" class="form__input" />
+          <input type="file" class="form__input">
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <p>Content</p>
+          <input type="text" class="form__input" />
+          <textarea name="" class="form__input form__input_text" id=""></textarea>
+          <input type="date" class="form__input form__input_date" />
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <p>Article settings</p>
+          <!--Add attributes to the input fields below-->
+          <input type="number" class="form__input" min="14" max="24" />
+          <input type="range" class="form__input form__input_type_range" min="400" max="1024" />
+          <select name="" id="" class="form__input form__input_type_select">
+            <option value="">Public</option>
+            <option value="">Private</option>
+          </select>
+        </fieldset>
+        <fieldset class="form__fieldset"></fieldset>
+      </form>
+    </div>
+  </body>
+</html>
