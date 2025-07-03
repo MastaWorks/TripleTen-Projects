@@ -4,35 +4,94 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Forms</title>
-    <link href="/Styles/styles2.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="page">
     <div class="form-container">
       <form class="form">
         <h1 class="form__title">Create an article</h1>
         <fieldset class="form__fieldset">
-          <p>Author</p>
-          <input type="text" class="form__input" />
-          <input type="email" class="form__input" />
-          <input type="file" class="form__input">
+          <label for="author-name" class="form__label">Author name</label>
+          <!--Add a default value to the input field below-->
+          <input
+            type="text"
+            class="form__input"
+            id="author-name"
+            name="authorName"
+            value="Elise"
+            required
+          />
+          <label for="author-email" class="form__label">Author email</label>
+          <!--Add a default value to the input field below-->
+          <input
+            type="email"
+            class="form__input"
+            id="author-email"
+            name="authorEmail"
+            value="me@elisebouer.com"
+            required
+          />
         </fieldset>
         <fieldset class="form__fieldset">
-          <p>Content</p>
-          <input type="text" class="form__input" />
-          <textarea name="" class="form__input form__input_text" id=""></textarea>
-          <input type="date" class="form__input form__input_date" />
+          <label for="article-title" class="form__label">Title</label>
+          <input
+            type="text"
+            class="form__input"
+            id="article-title"
+            name="articleTitle"
+            required
+          />
+          <label for="article-text" class="form__label">Text</label>
+          <textarea
+            class="form__input form__input_text"
+            id="article-text"
+            name="articleText"
+            required
+          ></textarea>
+          <label for="date" class="form__label">Publication date</label>
+          <input
+            type="date"
+            class="form__input form__input_date"
+            id="date"
+            name="date"
+          />
+          <label for="image" class="form__label">Image attachment</label>
+          <input type="file" class="form__input" id="image" name="image" />
         </fieldset>
         <fieldset class="form__fieldset">
-          <p>Article settings</p>
-          <!--Add attributes to the input fields below-->
-          <input type="number" class="form__input" min="14" max="24" />
-          <input type="range" class="form__input form__input_type_range" min="400" max="1024" />
-          <select name="" id="" class="form__input form__input_type_select">
-            <option value="">Public</option>
-            <option value="">Private</option>
+          <label for="article-status" class="form__label">Article status</label>
+          <label for="article-status" class="form__label">Article status</label>
+          <select
+            class="form__input form__input_type_select"
+            id="article-status"
+            name="articleStatus"
+          >
+            <option value="public">Public</option>
+            <option value="private">Private</option>
           </select>
+          <label for="text-size" class="form__label">Text size</label>
+          <input
+            type="number"
+            class="form__input"
+            min="14"
+            max="24"
+            id="text-size"
+            value="textSize"
+          />
+          <label for="text-width" class="form__label">Text width</label>
+          <input
+            type="range"
+            class="form__input form__input_type_range"
+            min="400"
+            max="1024"
+            id="text-width"
+            value="textWidth"
+          />
         </fieldset>
-        <fieldset class="form__fieldset"></fieldset>
+        <fieldset class="form__fieldset">
+          <button type="submit" class="form__button">Submit</button>
+          <button type="reset" class="form__button">Reset</button>
+        </fieldset>
       </form>
     </div>
   </body>
