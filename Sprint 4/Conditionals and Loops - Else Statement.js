@@ -18,3 +18,32 @@ if (age >= 18 && hasTicket) {
 } else {
   console.log("Sorry you cannot enter.");
 }
+
+//EXERCISE #3
+
+// Add an else statement to tell the program what to do if the value of the year variable is a non-leap year.
+
+// Make the console print "XXXX is a non-leap year." For example: 2009 is a non-leap year.
+
+let year = 2019;
+
+if (year % 4 === 0) {
+  console.log(year + " is a leap year.");
+} else {
+  console.log(year + " is a non-leap year.");
+}
+
+//EXERCISE #4
+
+// Use a for loop to iterate from 1 to 100 inclusive. The loop should also print the following to the console: the current number and whether it’s an even or odd number. Use this format:
+
+// n is odd
+// n is even
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(`${i} is even`);
+  } else {
+    console.log(`${i} is odd`);
+  }
+}
