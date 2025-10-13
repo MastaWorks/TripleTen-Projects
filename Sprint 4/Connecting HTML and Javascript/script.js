@@ -2,6 +2,7 @@ const reservationButton = document.querySelector(".reservation__button");
 const reservationModal = document.querySelector("#reservation-modal");
 const reservationCloseBtn = reservationModal.querySelector(".modal__close-btn");
 const reservationForm = reservationModal.querySelector(".modal__form");
+const confirmatiionModal= document.querySelector('#confirmation-modal');
 
 // reservationButton.addEventListener("click", function () {
 //   reservationModal.setAttribute("style", "visibility: visible");
@@ -17,4 +18,9 @@ reservationButton.addEventListener("click", function () {
 
 reservationCloseBtn.addEventListener("click", function () {
   reservationModal.removeAttribute("class", "modal_is-opened");
+});
+
+reservationForm.addEventListener('submit', function(evt){
+  evt.preventDefault();
+  confirmatiionModal.classList.add('modal_is-opened');
 });
