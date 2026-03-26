@@ -1,4 +1,4 @@
-stw//EXERCISE #2
+//EXERCISE #2
 
 // Brendan is organizing an event that has specific admission criteria. To enter, a person must be:
 
