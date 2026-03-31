@@ -2,26 +2,26 @@ const reservationButton = document.querySelector(".reservation__button");
 const reservationModal = document.querySelector("#reservation-modal");
 const reservationCloseBtn = reservationModal.querySelector(".modal__close-btn");
 const reservationForm = reservationModal.querySelector(".modal__form");
-const confirmatiionModal = document.querySelector("#confirmation-modal");
 const reservationNameInput = reservationModal.querySelector("#name-input");
 const reservationCountInput = reservationModal.querySelector("#count-input");
 const reservationDateInput = reservationModal.querySelector("#datetime-input");
 const reservationEmailInput = reservationModal.querySelector("#email-input");
 
-// reservationButton.addEventListener("click", function () {
-//   reservationModal.setAttribute("style", "visibility: visible");
-// });
 
-reservationButton.addEventListener("click", function () {
-  reservationModal.setAttribute("class", "modal_is-opened");
+const confirmationModal = document.querySelector("#confirmation-modal");
+const confirmationCloseBtn = confirmationModal.querySelector(".modal__close-btn");
+const confirmationTextEl = confirmationModal.querySelector(".modal__text");
+
+confirmationCloseBtn.addEventListener("click", function () {
+  confirmationModal.classList.remove("modal_is-opened");
 });
 
-// reservationCloseBtn.addEventListener("click", function () {
-//   reservationModal.setAttribute("style", "visibility: hidden");
-// });
+reservationButton.addEventListener("click", function () {
+  reservationModal.classList.add("modal_is-opened");
+});
 
 reservationCloseBtn.addEventListener("click", function () {
-  reservationModal.removeAttribute("class", "modal_is-opened");
+  reservationModal.classList.remove("modal_is-opened");
 });
 
 reservationForm.addEventListener("submit", function (evt) {
@@ -29,10 +29,31 @@ reservationForm.addEventListener("submit", function (evt) {
   confirmationModal.classList.add("modal_is-opened");
   reservationModal.classList.remove("modal_is-opened");
 
-  console.log(reservationNameInput.value);
-  console.log(reservationCountInput.value);
-  console.log(reservationDateInput.value);
-  console.log(reservationEmailInput.value);
+  const inputValues = {
+    name: reservationNameInput.value,
+    count: reservationCountInput.value,
+    date: reservationDateInput.value,
+    email: reservationEmailInput.value,
+  };
 
-  reservationForm.reset();
+  confirmationTextEl.textContent = getConfirmationMessage(inputValues);
+
+  evt.target.reset();
 });
+
+function formatDateTime(dateTimeStr) {
+  const date = new Date(dateTimeStr);
+  const month = date.toLocaleString("en-US", { month: "short" });
+  const day = date.getDate();
+  const time = date.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  });
+  return `${month} ${day} at ${time}`;
+}
+
+function getConfirmationMessage(values) {
+  let firstName = values.name.split(" ")[0];
+  return `Hi, ${firstName}! Your reservation for ${values.count} has been made for ${formatDateTime(values.date)}. A confirmation email has been sent to ${values.email}.`;
+}
